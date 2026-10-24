@@ -7,9 +7,9 @@ timers:
 
 # Физика штормового ветра (обновляется каждые 2 тика)
 physics:
-  player-wind-strength: 0.16
+  player-wind-strength: 0.11
   item-wind-strength: 0.12
-  sneak-multiplier: 0.6
+  sneak-multiplier: 0.5
   max-wind-speed: 1.35
 
 # Визуальные эффекты
