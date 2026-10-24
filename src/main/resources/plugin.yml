@@ -4,3 +4,14 @@ main: com.example.maltesewind.MalteseWind
 api-version: '26.3'
 authors: [ slava-famcs ]
 description: Storm Wind plugin for the Paper server
+
+commands:
+  wind:
+    description: Managing Storm Winds
+    usage: /wind <start|stop|status|reload>
+    permission: maltesewind.admin
+
+permissions:
+  maltesewind.admin:
+    description: Access to Administrative Wind Control Commands
+    default: op

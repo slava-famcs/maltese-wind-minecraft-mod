@@ -4,6 +4,7 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.Bukkit;
+import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class MalteseWind extends JavaPlugin {
@@ -14,9 +15,19 @@ public final class MalteseWind extends JavaPlugin {
     public void onEnable() {
         var console = Bukkit.getConsoleSender();
 
-        // Инициализация и запуск менеджера ветра
+        // Сохраняем стандартный config.yml, если он еще не создан
+        saveDefaultConfig();
+
         this.windManager = new WindManager(this);
         this.windManager.startCycle();
+
+        // Регистрация команды /wind
+        PluginCommand command = getCommand("wind");
+        if (command != null) {
+            WindCommand windCommand = new WindCommand(this.windManager);
+            command.setExecutor(windCommand);
+            command.setTabCompleter(windCommand);
+        }
 
         console.sendMessage(Component.text("========================================", NamedTextColor.DARK_AQUA));
         console.sendMessage(Component.text(" 🌪 MalteseWind ", NamedTextColor.AQUA, TextDecoration.BOLD)
@@ -29,7 +40,6 @@ public final class MalteseWind extends JavaPlugin {
     public void onDisable() {
         var console = Bukkit.getConsoleSender();
 
-        // Остановка активных таймеров шторма
         if (this.windManager != null) {
             this.windManager.shutdown();
         }

@@ -1,0 +1,29 @@
+# Временные интервалы (в минутах реального времени)
+timers:
+  calm-min-minutes: 20
+  calm-max-minutes: 40
+  storm-min-minutes: 3
+  storm-max-minutes: 5
+
+# Физика штормового ветра (обновляется каждые 2 тика)
+physics:
+  player-wind-strength: 0.16
+  item-wind-strength: 0.12
+  sneak-multiplier: 0.6
+  max-wind-speed: 1.35
+
+# Визуальные эффекты
+particles:
+  enabled: true
+  amount-per-tick: 6
+  enable-heavy-smoke: true
+
+# Звуковые эффекты завывания ветра (для игроков под открытым небом)
+sounds:
+  enabled: true
+  # Громкость звука (от 0.0 до 1.0)
+  volume: 0.65
+
+# Индикатор бури сверху экрана (BossBar)
+bossbar:
+  enabled: true
