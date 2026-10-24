@@ -1,0 +1,48 @@
+# ==========================================
+# Сборка Maven и портативный архив
+# ==========================================
+target/
+apache-maven-*/
+maven.zip
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# ==========================================
+# Скомпилированные файлы Java и логи
+# ==========================================
+*.class
+*.log
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+# ==========================================
+# Среды разработки (VS Code, IntelliJ, Eclipse)
+# ==========================================
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.factorypath
+
+# ==========================================
+# Системные файлы ОС (Windows / macOS / Linux)
+# ==========================================
+.DS_Store
+Thumbs.db
+Desktop.ini
