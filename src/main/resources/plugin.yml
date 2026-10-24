@@ -1,0 +1,6 @@
+name: MalteseWind
+version: '${project.version}'
+main: com.example.maltesewind.MalteseWind
+api-version: '26.3'
+authors: [ slava-famcs ]
+description: Storm Wind plugin for the Paper server
